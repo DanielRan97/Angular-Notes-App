@@ -1,0 +1,140 @@
+#home {
+  text-align: center;
+}
+
+#title {
+  font-size: 70px;
+  font-family: 'Lobster', cursive;
+  display: inline-block;
+}
+
+#noteForm {
+  padding: 5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -48px;
+}
+
+#closeButton {
+
+  background-color: #ffffff00;
+  border: none;
+  color: red;
+}
+
+#closeButton:hover {
+  color: black;
+}
+
+#closeButton:active {
+  color: white;
+
+}
+
+#editButton{
+ position: relative;
+ left: 10px;
+ bottom: 4px;
+  background-color: #ffffff00;
+  border: none;
+  color: blue;
+ 
+}
+
+
+#editButton:hover {
+  color: black;
+}
+
+#editButton:active {
+  color: white;
+
+}
+
+#saveButton{
+  position: relative;
+  left: 15px;
+   background-color: #ffffff00;
+   border: none;
+   color: green;
+  
+ }
+ 
+ 
+ #saveButton:hover {
+   color: black;
+ }
+ 
+ #saveButton:active {
+   color: white;
+ 
+ }
+
+.noteButton{
+  float: right;
+  margin-top: -27px;
+}
+
+#note {
+  display: inline-block;
+  margin: 50px;
+  padding: 3px;
+  width: 250px;
+  height: 255px;
+  background-image: url('/assets/note.png');
+}
+
+#noteEdit{
+  background-image: url(/assets/note.png);
+  width: 250px;
+  height: 255px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content{
+  background-color: #fff0;
+  border: none;
+}
+
+@media only screen and (max-width: 530px) {
+
+  #noteForm {
+    padding: 5px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -0px;
+  }
+
+
+}
+
+#editNoteForm input{
+ height: 27px;
+}
+
+#noteEditFormTextArea{
+  resize: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

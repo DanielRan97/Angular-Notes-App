@@ -1,0 +1,73 @@
+<div id="home">
+
+  <h1 id="title">My Notes</h1>
+
+  <div id="noteForm">
+
+    <app-note-form (noteEvent)="getNotesArrFromChild($event)" [allNotes]="notes"></app-note-form>
+
+  </div>
+
+  <div id="note" *ngFor="let note of notes" class="animated slideInDown">
+
+    <div style="margin-top: 52px;">
+      <div class="noteButton">
+        <button id="editButton" type="button" (click)="sendValuesToEditForm(note)" class="btn btn-primary" data-toggle="modal" data-target="#editNote">
+          <i class="far fa-edit"></i>
+        </button>
+        <button type="button" id="closeButton" (click)="deleteNote(note.id)"><i class="fas fa-times"></i></button>
+      </div>
+
+      <app-note [noteObject]="note"></app-note>
+
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="editNote" tabindex="-1" aria-labelledby="editNoteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body" id="noteEdit">
+
+        
+
+          <div id="editNoteForm">
+
+            <form #f="ngForm" [formGroup]="noteEditFormGroup">
+
+              <div class="noteButton" style="margin-top: 10px;">
+                <button type="button" (click)="editForm(f)" id="saveButton" class="btn btn-primary" data-dismiss="modal"><i class="fas fa-check"></i></button>
+                <button type="button" id="closeButton" class="btn btn-danger" data-dismiss="modal"><i
+                    class="fas fa-times"></i></button>
+              </div>
+
+                <h6 style="position: relative;top: 23px;left: 37px;">Edit note</h6>
+
+                  <label>
+                    <input class="form-control" type="text" placeholder="Title" maxlength="15" required formControlName="title">
+                  </label>
+
+                  <label>
+                    <textarea class="form-control" aria-label="With textarea" placeholder="Enter your text here"
+                      required minlength="2" formControlName="body"> </textarea>
+                  </label>
+
+                  <label>
+                    <input class="form-control" type="time" placeholder="Default input" required formControlName="time">
+                  </label>
+
+                  <label>
+                    <input class="form-control" type="date" placeholder="Default input" required formControlName="date">
+                  </label>
+
+              </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>

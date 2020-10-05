@@ -1,0 +1,34 @@
+<div id="noteForm">
+
+  <form #f="ngForm" [formGroup]="noteFormGroup">
+    <div class="divForm" id="left">
+
+      <label>
+        <input class="form-control" type="text" placeholder="Title" maxlength="15" required formControlName="title">
+      </label>
+
+      <label>
+        <textarea class="form-control" aria-label="With textarea" placeholder="Enter your text here" required formControlName="body" minlength="2"> </textarea>
+      </label>
+    
+    </div>
+   
+    <div class="divForm" id="right">
+     
+      <label>
+        <input class="form-control" type="time" placeholder="Default input" formControlName="time" required>
+      </label>
+
+      <label>
+        <input class="form-control" type="date" placeholder="Default input" formControlName="date" required>
+      </label>
+
+    </div>
+
+    <button class="btn btn-warning" [disabled]="!f.valid" (click)="addNote(f)" style="display: block;margin-left: auto;margin-right: auto;"><b> Create new note</b> <i style="margin-left: 5px;" class="fas fa-plus"></i></button>
+
+  </form>
+
+
+
+</div>

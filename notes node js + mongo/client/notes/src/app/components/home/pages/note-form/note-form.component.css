@@ -1,0 +1,28 @@
+input , textarea{
+    width: 250px;
+    display: block;
+    margin: 5px;
+}
+
+label{
+    display: block;
+}
+
+.divForm{
+    display: inline-block;
+}
+
+@media only screen and (min-width: 530px) {
+
+    #right{
+    position: relative;
+    top:  47px;
+
+}
+
+textarea{
+    height: 39px;
+}
+
+}
+
